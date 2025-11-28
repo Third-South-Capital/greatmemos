@@ -618,49 +618,14 @@
     <script>
         function downloadAll(event) {
             event.preventDefault();
-
-            const memos = [
-                '/memos/garlinghouse-peanut-butter.pdf',
-                '/memos/zynga-copycat-strategy.pdf',
-                '/memos/hinkie-76rs.pdf',
-                '/memos/slack-saddles.pdf',
-                '/memos/schultz-strategic.pdf',
-                '/memos/roelof-youtube.pdf',
-                '/memos/zuck-messenger-ecosystem.pdf',
-                '/memos/zuck-systrom.pdf',
-                '/memos/jobs-ibooks.pdf',
-                '/memos/jobs-top-100.pdf',
-                '/memos/musk-tesla.png',
-                '/memos/billgates-moviemaker.pdf',
-                '/memos/billgates-tidalwave.pdf',
-                '/memos/yegge.pdf',
-                '/memos/javier-showrunning.pdf',
-                '/memos/sutton-bitter-lesson.pdf',
-                '/memos/buffett-sees.pdf',
-                '/memos/buffett-raikes-emails.pdf',
-                '/memos/marks-predict.pdf',
-                '/memos/markopolos-madoff-fraud.pdf',
-                '/memos/powell-memo.pdf',
-                '/memos/churchill-brevity.jpg',
-                '/memos/completed-staff-work-thomas-watson-jr-ibm.pdf',
-                '/memos/washington-states.pdf',
-                '/memos/pliny-trajan-christians.pdf',
-                '/memos/napoleon-josephine.pdf',
-                '/memos/shultz-memo.pdf',
-                '/memos/ogilvy-principles.jpeg',
-                '/memos/zerodef.pdf'
-            ];
-
-            memos.forEach((memo, index) => {
-                setTimeout(() => {
-                    const link = document.createElement('a');
-                    link.href = memo;
-                    link.download = memo.split('/').pop();
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                }, index * 300);
-            });
+            
+            // Download the combined compilation PDF
+            const link = document.createElement('a');
+            link.href = '/memos/great-memos-compilation.pdf';
+            link.download = 'great-memos-compilation.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
     </script>
 </body>
