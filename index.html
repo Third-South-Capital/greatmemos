@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Great Memos - Historic Business Documents Archive</title>
+    <meta name="title" content="Great Memos - Historic Business Documents Archive">
+    <meta name="description" content="A curated archive of historic business memos, strategic documents, and leadership correspondence from 112 AD to present. Featuring Warren Buffett, Steve Jobs, Bill Gates, and more.">
+    <meta name="keywords" content="business memos, strategic documents, leadership letters, corporate history, Warren Buffett, Steve Jobs, Bill Gates, business strategy, historic documents">
+    <meta name="author" content="Great Memos Archive">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://greatmemos.com/">
+    <meta property="og:title" content="Great Memos - Historic Business Documents Archive">
+    <meta property="og:description" content="A curated archive of historic business memos, strategic documents, and leadership correspondence from 112 AD to present.">
+    <meta property="og:image" content="https://greatmemos.com/assets/og-image.svg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://greatmemos.com/">
+    <meta property="twitter:title" content="Great Memos - Historic Business Documents Archive">
+    <meta property="twitter:description" content="A curated archive of historic business memos, strategic documents, and leadership correspondence from 112 AD to present.">
+    <meta property="twitter:image" content="https://greatmemos.com/assets/og-image.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://greatmemos.com/">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #c0c0c0;
+            color: #000;
+            margin: 20px;
+            line-height: 1.4;
+        }
+
+        .header {
+            background: #ffffff;
+            border: 2px solid #000;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+            color: #000080;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .download-all-btn {
+            background: #c0c0c0;
+            color: #000;
+            border: 2px outset #fff;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .download-all-btn:active {
+            border-style: inset;
+        }
+
+        .memo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .memo-card {
+            background: #ffffff;
+            border: 2px solid #000;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .memo-header {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 8px;
+        }
+
+        .memo-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #000;
+            margin: 0 0 8px 0;
+        }
+
+        .memo-meta {
+            font-size: 12px;
+            margin: 0;
+        }
+
+        .memo-year,
+        .memo-author {
+            color: #000;
+            display: block;
+        }
+
+        .memo-description {
+            font-size: 13px;
+            color: #000;
+            margin-bottom: 12px;
+            flex-grow: 1;
+        }
+
+        .download-btn {
+            background: #c0c0c0;
+            color: #000;
+            border: 2px outset #fff;
+            padding: 6px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .download-btn:active {
+            border-style: inset;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 30px 0 15px 0;
+            color: #000080;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        footer {
+            background: #ffffff;
+            border: 2px solid #000;
+            padding: 15px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 12px;
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #0000ff;
+            text-decoration: underline;
+        }
+
+        footer a:visited {
+            color: #800080;
+        }
+
+        @media (max-width: 1200px) {
+            .memo-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .memo-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .section-title {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .memo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Great Memos</h1>
+                    <p class="subtitle">An archive of historic business documents and strategic correspondence</p>
+                </div>
+                <a href="#" class="download-all-btn" onclick="downloadAll(event)">Download All</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">Strategic Memos & Leadership</h2>
+            <div class="memo-grid">
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">The Peanut Butter Manifesto</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2006</span>
+                            <span class="memo-author">Brad Garlinghouse</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Yahoo executive's leaked memo warning about spreading resources too thin, predicting the company's decline.</p>
+                    <a href="/memos/garlinghouse-peanut-butter.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">To the equity partners of Philadelphia 76ers, L.P.</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2016</span>
+                            <span class="memo-author">Sam Hinkie</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">76ers GM's 13-page resignation letter defending "The Process" and long-term strategic thinking in basketball.</p>
+                    <a href="/memos/hinkie-76rs.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">We Don’t Sell Saddles Here</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2014</span>
+                            <span class="memo-author">Stewart Butterfield</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Slack CEO's memo on focusing on what matters and building products users love, not just features.</p>
+                    <a href="/memos/slack-saddles.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">The Commoditization of the Starbucks Experience</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2007</span>
+                            <span class="memo-author">Howard Schultz</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Starbucks founder's transformation agenda memo outlining the turnaround strategy during the financial crisis.</p>
+                    <a href="/memos/schultz-strategic.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Re: YouTube</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2005</span>
+                            <span class="memo-author">Roelof Botha</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Sequoia partner's investment memo on YouTube, one of the most successful venture investments ever made.</p>
+                    <a href="/memos/roelof-youtube.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Thoughts on Messenger businessecosystem</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2014</span>
+                            <span class="memo-author">Mark Zuckerberg</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Facebook's strategic vision for building a comprehensive messaging platform and ecosystem.</p>
+                    <a href="/memos/zuck-messenger-ecosystem.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Instagram acquisition offer</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2012</span>
+                            <span class="memo-author">Mark Zuckerberg</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Texts from Zuckerberg to Instagram's Kevin Systrom during Facebook's acquisition negotiations.</p>
+                    <a href="/memos/zuck-systrom.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">How to Write</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1982</span>
+                            <span class="memo-author">David Ogilvy</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Advertising legend's principles for creating effective campaigns and building a creative agency.</p>
+                    <a href="/memos/ogilvy-principles.jpeg" class="download-btn" download>Download</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Tech Leadership & Product Philosophy</h2>
+            <div class="memo-grid">
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">iBooks and HarperCollins</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2010</span>
+                            <span class="memo-author">Steve Jobs</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Jobs' emails regarding Apple's iBooks strategy and negotiations with publishers.</p>
+                    <a href="/memos/jobs-ibooks.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Communication Within Tesla</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2017</span>
+                            <span class="memo-author">Elon Musk</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Musk's direct email to Tesla employees about productivity, meetings, and organizational efficiency.</p>
+                    <a href="/memos/musk-tesla.png" class="download-btn" download>Download</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Windows Usability Systematic degradation flame</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2003</span>
+                            <span class="memo-author">Bill Gates</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Gates' frustrated email about Windows Movie Maker's difficult installation process, exemplifying user-first thinking.</p>
+                    <a href="/memos/billgates-moviemaker.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">The Internet Tidal Wave</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1995</span>
+                            <span class="memo-author">Bill Gates</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Historic memo where Gates recognizes the Internet as a "tidal wave" and pivots Microsoft's entire strategy.</p>
+                    <a href="/memos/billgates-tidalwave.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Steve Yegge's Platform Rant</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2011</span>
+                            <span class="memo-author">Steve Yegge</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Google engineer's accidentally public post comparing Amazon and Google's platform philosophies.</p>
+                    <a href="/memos/yegge.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">THE ELEVEN LAWS OF SHOWRUNNING</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2016</span>
+                            <span class="memo-author">Javier Grillo-Marxuach</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">TV writer's comprehensive guide to showrunning, covering creative leadership and production management.</p>
+                    <a href="/memos/javier-showrunning.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Completed Staff Work</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1950s</span>
+                            <span class="memo-author">Thomas Watson Jr.</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">IBM's philosophy on presenting solutions, not problems—bringing fully-formed recommendations to leadership.</p>
+                    <a href="/memos/completed-staff-work-thomas-watson-jr-ibm.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Zero-defects code</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1989</span>
+                            <span class="memo-author">Philip Crosby</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Quality management philosophy emphasizing prevention over inspection and doing things right the first time.</p>
+                    <a href="/memos/zerodef.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Investment & Business Analysis</h2>
+            <div class="memo-grid">
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">See's Candy Shops, Inc.</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1972</span>
+                            <span class="memo-author">Warren Buffett</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Buffett's letter to the President of See's candy on brand positioning.</p>
+                    <a href="/memos/buffett-sees.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Go Huskers!</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1997</span>
+                            <span class="memo-author">Warren Buffett</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Email correspondence between Warren Buffett and Bill Gates' close friend Jeff Raikes on investing in Microsoft.</p>
+                    <a href="/memos/buffett-raikes-emails.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Madoff Hedge Fund Fraud</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2005</span>
+                            <span class="memo-author">Harry Markopolos</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Whistleblower's detailed analysis exposing Bernie Madoff's Ponzi scheme, ignored by the SEC for years.</p>
+                    <a href="/memos/markopolos-madoff-fraud.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Historical & Political Documents</h2>
+            <div class="memo-grid">
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">ATTACK ON AMERICAN FREE ENTERPRISE SYSTEM </h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1971</span>
+                            <span class="memo-author">Lewis Powell</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Confidential memo to the U.S. Chamber of Commerce outlining a strategy for corporate influence in politics.</p>
+                    <a href="/memos/powell-memo.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Brevity</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1940</span>
+                            <span class="memo-author">Winston Churchill</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Churchill's memo demanding concise reporting from military and government officials during WWII.</p>
+                    <a href="/memos/churchill-brevity.jpg" class="download-btn" download>Download</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Washington's Farewell Address</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1783</span>
+                            <span class="memo-author">George Washington</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Washington's warning to the nation about political parties, foreign entanglements, and national unity.</p>
+                    <a href="/memos/washington-states.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Pliny and Trajan on Christians</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">112 AD</span>
+                            <span class="memo-author">Pliny the Younger</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Roman governor's letter to Emperor Trajan seeking guidance on prosecuting early Christians.</p>
+                    <a href="/memos/pliny-trajan-christians.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Shultz Foreign Policy Memo</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1984</span>
+                            <span class="memo-author">George Shultz</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Secretary of State's strategic memo on U.S. foreign policy during the Reagan administration.</p>
+                    <a href="/memos/shultz-reagan.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>This archive is maintained as an educational resource.</p>
+            <p style="margin-top: 0.5rem;">Open source on <a href="https://github.com/Third-South-Capital/greatmemos" target="_blank">GitHub. Add a memo if you have a great one.</a></p>
+            <p style="margin-top: 0.5rem;">Made by your friends at <a href="https://thirdsouth.capital/" target="_blank">Third South Capital</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function downloadAll(event) {
+            event.preventDefault();
+
+            // Download the combined compilation PDF
+            const link = document.createElement('a');
+            link.href = '/memos/great-memos-compilation.pdf';
+            link.download = 'great-memos-compilation.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
