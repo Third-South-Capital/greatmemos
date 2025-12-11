@@ -38,6 +38,7 @@ def main():
         # Historical & Political Documents
         "pliny-trajan-christians.pdf",
         "washington-states.pdf",
+        "carp-nuclear.pdf",
         "powell-memo.pdf",
         "shultz-reagan.pdf",
         # Strategic Memos & Leadership
@@ -48,6 +49,9 @@ def main():
         "schultz-strategic.pdf",
         "zuck-messenger-ecosystem.pdf",
         "zuck-systrom.pdf",
+        "jeff-disney.pdf",
+        "mtv.pdf",
+        "kilar-hulu.pdf",
         "ogilvy-principles.jpeg",
         # Tech Leadership & Product Philosophy
         "jobs-ibooks.pdf",
@@ -57,7 +61,12 @@ def main():
         "yegge.pdf",
         "javier-showrunning.pdf",
         "completed-staff-work-thomas-watson-jr-ibm.pdf",
+        "jackson-word.pdf",
         "zerodef.pdf",
+        "nate-roadkill.pdf",
+        "ozzie-internet.pdf",
+        "bosworth-ads.pdf",
+        "zuck-unity.pdf",
         "sutton-bitter-lesson.pdf",
         # Investment & Business Analysis
         "buffett-geico.pdf",
