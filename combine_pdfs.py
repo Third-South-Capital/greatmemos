@@ -35,6 +35,12 @@ def main():
 
     # List of memos in order (by category as shown on the site)
     memo_files = [
+        # Historical & Political Documents
+        "pliny-trajan-christians.pdf",
+        "washington-states.pdf",
+        "churchill-brevity.jpg",
+        "powell-memo.pdf",
+        "shultz-reagan.pdf",
         # Strategic Memos & Leadership
         "garlinghouse-peanut-butter.pdf",
         "hinkie-76rs.pdf",
@@ -58,12 +64,26 @@ def main():
         "buffett-sees.pdf",
         "buffett-raikes-emails.pdf",
         "markopolos-madoff-fraud.pdf",
-        # Historical & Political Documents
-        "powell-memo.pdf",
-        "churchill-brevity.jpg",
-        "washington-states.pdf",
-        "pliny-trajan-christians.pdf",
-        "shultz-reagan.pdf",
+        "bessemer-yelp.pdf",
+        "besssemer-linkedin.pdf",
+        "bessemer-lifelock.pdf",
+        "bessemer-wix.pdf",
+        "bessemer-dropcam.pdf",
+        "bessemer-twilio.pdf",
+        "bessemer-mindbody.pdf",
+        "bessemer-shopify.pdf",
+        "bessemer-mediassist.pdf",
+        "bessemer-fiverr.pdf",
+        "bessemer-pinterest.pdf",
+        "bessemer-sendgrid.pdf",
+        "bessemer-twitch.pdf",
+        "bessemer-auth0.pdf",
+        "bessemer-pagerduty.pdf",
+        "bessemer-rocketlab.pdf",
+        "bessemer-servicetitan.pdf",
+        "bessemer-velo3d.pdf",
+        "bessemer-toast.pdf",
+        "buffett-geico.pdf",
     ]
 
     merger = PdfMerger()

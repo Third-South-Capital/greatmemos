@@ -40,16 +40,16 @@
             line-height: 1.4;
         }
 
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
         .header {
             background: #ffffff;
             border: 2px solid #000;
             padding: 20px;
             margin-bottom: 20px;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
         }
 
         h1 {
@@ -225,8 +225,8 @@
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
+    <div class="container">
+        <header class="header">
             <div class="header-content">
                 <div class="header-text">
                     <h1>Great Memos</h1>
@@ -234,10 +234,75 @@
                 </div>
                 <a href="#" class="download-all-btn" onclick="downloadAll(event)">Download All</a>
             </div>
-        </div>
-    </header>
+        </header>
+    </div>
 
     <main class="container">
+        <section class="section">
+            <h2 class="section-title">Historical & Political Documents</h2>
+            <div class="memo-grid">
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Pliny and Trajan on Christians</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">112 AD</span>
+                            <span class="memo-author">Pliny the Younger</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Roman governor's letter to Emperor Trajan seeking guidance on prosecuting early Christians.</p>
+                    <a href="/memos/pliny-trajan-christians.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Washington's Farewell Address</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1783</span>
+                            <span class="memo-author">George Washington</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Washington's warning to the nation about political parties, foreign entanglements, and national unity.</p>
+                    <a href="/memos/washington-states.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Brevity</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1940</span>
+                            <span class="memo-author">Winston Churchill</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Churchill's memo demanding concise reporting from military and government officials during WWII.</p>
+                    <a href="/memos/churchill-brevity.jpg" class="download-btn" download>Download</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">ATTACK ON AMERICAN FREE ENTERPRISE SYSTEM </h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1971</span>
+                            <span class="memo-author">Lewis Powell</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Confidential memo to the U.S. Chamber of Commerce outlining a strategy for corporate influence in politics.</p>
+                    <a href="/memos/powell-memo.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Shultz Foreign Policy Memo</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1984</span>
+                            <span class="memo-author">George Shultz</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Secretary of State's strategic memo on U.S. foreign policy during the Reagan administration.</p>
+                    <a href="/memos/shultz-reagan.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+            </div>
+        </section>
+
         <section class="section">
             <h2 class="section-title">Strategic Memos & Leadership</h2>
             <div class="memo-grid">
@@ -303,7 +368,7 @@
 
                 <div class="memo-card">
                     <div class="memo-header">
-                        <h3 class="memo-title">Thoughts on Messenger businessecosystem</h3>
+                        <h3 class="memo-title">Thoughts on Messenger</h3>
                         <div class="memo-meta">
                             <span class="memo-year">2014</span>
                             <span class="memo-author">Mark Zuckerberg</span>
@@ -478,70 +543,245 @@
                     <p class="memo-description">Whistleblower's detailed analysis exposing Bernie Madoff's Ponzi scheme, ignored by the SEC for years.</p>
                     <a href="/memos/markopolos-madoff-fraud.pdf" class="download-btn" download>Download PDF</a>
                 </div>
-            </div>
-        </section>
 
-        <section class="section">
-            <h2 class="section-title">Historical & Political Documents</h2>
-            <div class="memo-grid">
                 <div class="memo-card">
                     <div class="memo-header">
-                        <h3 class="memo-title">ATTACK ON AMERICAN FREE ENTERPRISE SYSTEM </h3>
+                        <h3 class="memo-title">Yelp Investment</h3>
                         <div class="memo-meta">
-                            <span class="memo-year">1971</span>
-                            <span class="memo-author">Lewis Powell</span>
+                            <span class="memo-year">2005</span>
+                            <span class="memo-author">Jeremy Levine (BVP)</span>
                         </div>
                     </div>
-                    <p class="memo-description">Confidential memo to the U.S. Chamber of Commerce outlining a strategy for corporate influence in politics.</p>
-                    <a href="/memos/powell-memo.pdf" class="download-btn" download>Download PDF</a>
+                    <p class="memo-description">Bessemer's early investment memo on Yelp, the local business review platform founded by PayPal alumni.</p>
+                    <a href="/memos/bessemer-yelp.pdf" class="download-btn" download>Download PDF</a>
                 </div>
 
                 <div class="memo-card">
                     <div class="memo-header">
-                        <h3 class="memo-title">Brevity</h3>
+                        <h3 class="memo-title">LinkedIn Investment</h3>
                         <div class="memo-meta">
-                            <span class="memo-year">1940</span>
-                            <span class="memo-author">Winston Churchill</span>
+                            <span class="memo-year">2006</span>
+                            <span class="memo-author">Jeremy Levine (BVP)</span>
                         </div>
                     </div>
-                    <p class="memo-description">Churchill's memo demanding concise reporting from military and government officials during WWII.</p>
-                    <a href="/memos/churchill-brevity.jpg" class="download-btn" download>Download</a>
+                    <p class="memo-description">Bessemer Venture Partners' investment memo on LinkedIn's Series C, analyzing the professional networking site's network effects.</p>
+                    <a href="/memos/besssemer-linkedin.pdf" class="download-btn" download>Download PDF</a>
                 </div>
 
                 <div class="memo-card">
                     <div class="memo-header">
-                        <h3 class="memo-title">Washington's Farewell Address</h3>
+                        <h3 class="memo-title">LifeLock Investment</h3>
                         <div class="memo-meta">
-                            <span class="memo-year">1783</span>
-                            <span class="memo-author">George Washington</span>
+                            <span class="memo-year">2006</span>
+                            <span class="memo-author">David Cowan, James Cham (BVP)</span>
                         </div>
                     </div>
-                    <p class="memo-description">Washington's warning to the nation about political parties, foreign entanglements, and national unity.</p>
-                    <a href="/memos/washington-states.pdf" class="download-btn" download>Download PDF</a>
+                    <p class="memo-description">Bessemer's Series A investment memo for LifeLock, analyzing the identity theft protection market opportunity.</p>
+                    <a href="/memos/bessemer-lifelock.pdf" class="download-btn" download>Download PDF</a>
                 </div>
 
                 <div class="memo-card">
                     <div class="memo-header">
-                        <h3 class="memo-title">Pliny and Trajan on Christians</h3>
+                        <h3 class="memo-title">Wix Investment</h3>
                         <div class="memo-meta">
-                            <span class="memo-year">112 AD</span>
-                            <span class="memo-author">Pliny the Younger</span>
+                            <span class="memo-year">2007</span>
+                            <span class="memo-author">Adam Fisher (BVP)</span>
                         </div>
                     </div>
-                    <p class="memo-description">Roman governor's letter to Emperor Trajan seeking guidance on prosecuting early Christians.</p>
-                    <a href="/memos/pliny-trajan-christians.pdf" class="download-btn" download>Download PDF</a>
+                    <p class="memo-description">Bessemer's seed investment in Wix, the Tel Aviv-based website builder for mass market consumers.</p>
+                    <a href="/memos/bessemer-wix.pdf" class="download-btn" download>Download PDF</a>
                 </div>
 
                 <div class="memo-card">
                     <div class="memo-header">
-                        <h3 class="memo-title">Shultz Foreign Policy Memo</h3>
+                        <h3 class="memo-title">Dropcam Investment</h3>
                         <div class="memo-meta">
-                            <span class="memo-year">1984</span>
-                            <span class="memo-author">George Shultz</span>
+                            <span class="memo-year">2009</span>
+                            <span class="memo-author">David Cowan, James Cham (BVP)</span>
                         </div>
                     </div>
-                    <p class="memo-description">Secretary of State's strategic memo on U.S. foreign policy during the Reagan administration.</p>
-                    <a href="/memos/shultz-reagan.pdf" class="download-btn" download>Download PDF</a>
+                    <p class="memo-description">Bessemer's seed investment in Dropcam, analyzing the Internet camera service for consumers.</p>
+                    <a href="/memos/bessemer-dropcam.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Twilio Investment</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2009</span>
+                            <span class="memo-author">David Cowan, Ethan Kurzweil (BVP)</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Bessemer's seed investment in Twilio's communications API platform, joining Founders Fund and Mitch Kapor.</p>
+                    <a href="/memos/bessemer-twilio.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Mindbody Investment</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2010</span>
+                            <span class="memo-author">Jeremy Levine, Sarah Tavel (BVP)</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Bessemer's investment in Mindbody, a SaaS platform for fitness centers, yoga studios, and spas.</p>
+                    <a href="/memos/bessemer-mindbody.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Shopify Investment</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2010</span>
+                            <span class="memo-author">Alex Ferrara, Trevor Oelschig (BVP)</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Bessemer's Series A memo for Shopify, analyzing the e-commerce platform for SMBs.</p>
+                    <a href="/memos/bessemer-shopify.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Medi Assist Investment</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2010</span>
+                            <span class="memo-author">Vishal Gupta, Chitresh Modi (BVP)</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Bessemer's investment in Medi Assist, India's largest third party administrator of health insurance claims.</p>
+                    <a href="/memos/bessemer-mediassist.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Fiverr Investment</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2011</span>
+                            <span class="memo-author">Adam Fisher, Jeremy Levine (BVP)</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Bessemer's investment in Fiverr, the Israel-based marketplace for five-dollar micro-services.</p>
+                    <a href="/memos/bessemer-fiverr.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Pinterest Investment</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2011</span>
+                            <span class="memo-author">Jeremy Levine, Sarah Tavel (BVP)</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Bessemer's early investment memo on Pinterest, the social e-commerce platform for curating product catalogs.</p>
+                    <a href="/memos/bessemer-pinterest.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">SendGrid Investment</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2011</span>
+                            <span class="memo-author">Byron Deeter, Ethan Kurzweil (BVP)</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Bessemer's Series B investment in SendGrid, the email Platform-as-a-Service company.</p>
+                    <a href="/memos/bessemer-sendgrid.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Twitch Investment</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2012</span>
+                            <span class="memo-author">David Cowan, Ethan Kurzweil (BVP)</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Bessemer's Series B investment in Twitch.tv (formerly Justin.TV), the game streaming platform.</p>
+                    <a href="/memos/bessemer-twitch.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Auth0 Investment</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2014</span>
+                            <span class="memo-author">David Cowan, Sunil Nagaraj (BVP)</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Bessemer's seed investment in Auth0, the "Twilio of identity" for web and mobile app authentication.</p>
+                    <a href="/memos/bessemer-auth0.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">PagerDuty Investment</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2014</span>
+                            <span class="memo-author">Trevor Oelschig, Ethan Kurzweil (BVP)</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Bessemer's Series B investment memo for PagerDuty, the incident response platform for developers.</p>
+                    <a href="/memos/bessemer-pagerduty.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Rocket Lab Investment</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2014</span>
+                            <span class="memo-author">David Cowan, Sunil Nagaraj (BVP)</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Bessemer's Series B investment in Rocket Lab, the aerospace manufacturer and launch service provider.</p>
+                    <a href="/memos/bessemer-rocketlab.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">ServiceTitan Investment</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2015</span>
+                            <span class="memo-author">Byron Deeter, Kristina Shen (BVP)</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Bessemer's Series A investment in ServiceTitan, vertical SaaS for home services businesses.</p>
+                    <a href="/memos/bessemer-servicetitan.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Velo3D Investment</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2015</span>
+                            <span class="memo-author">David Cowan, Sunil Nagaraj (BVP)</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Bessemer's Series A memo for Velo3D, analyzing the breakthrough 3D metal printing technology.</p>
+                    <a href="/memos/bessemer-velo3d.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Toast Investment</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2015</span>
+                            <span class="memo-author">Kent Bennett, Eric Ahlgren (BVP)</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Bessemer's Series B investment in Toast, the Boston-based restaurant point of sale software company.</p>
+                    <a href="/memos/bessemer-toast.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">GEICO Investment</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1976</span>
+                            <span class="memo-author">Warren Buffett</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Buffett's analysis of Berkshire Hathaway's investment in GEICO during the company's financial crisis.</p>
+                    <a href="/memos/buffett-geico.pdf" class="download-btn" download>Download PDF</a>
                 </div>
             </div>
         </section>
