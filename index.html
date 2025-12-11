@@ -102,7 +102,7 @@
         }
 
         .search-box {
-            width: 100%;
+            width: 100%-20px;
             padding: 10px;
             font-size: 14px;
             border: 2px inset #fff;
@@ -960,22 +960,22 @@
         document.addEventListener('DOMContentLoaded', function() {
             const searchBox = document.getElementById('searchBox');
             const sections = document.querySelectorAll('.section');
-            
+
             searchBox.addEventListener('input', function(e) {
                 const searchTerm = e.target.value.toLowerCase().trim();
-                
+
                 sections.forEach(section => {
                     const cards = section.querySelectorAll('.memo-card');
                     let visibleCount = 0;
-                    
+
                     cards.forEach(card => {
                         const title = card.querySelector('.memo-title').textContent.toLowerCase();
                         const author = card.querySelector('.memo-author').textContent.toLowerCase();
                         const year = card.querySelector('.memo-year').textContent.toLowerCase();
                         const description = card.querySelector('.memo-description').textContent.toLowerCase();
-                        
+
                         const searchableText = title + ' ' + author + ' ' + year + ' ' + description;
-                        
+
                         if (searchTerm === '' || searchableText.includes(searchTerm)) {
                             card.classList.remove('hidden');
                             visibleCount++;
@@ -983,7 +983,7 @@
                             card.classList.add('hidden');
                         }
                     });
-                    
+
                     // Hide section title if no cards are visible
                     const sectionTitle = section.querySelector('.section-title');
                     if (visibleCount === 0) {
