@@ -94,6 +94,26 @@
             border-style: inset;
         }
 
+        .search-container {
+            background: #ffffff;
+            border: 2px solid #000;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 2px inset #fff;
+            background: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .search-box:focus {
+            outline: 2px solid #000080;
+        }
+
         .memo-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -170,6 +190,10 @@
             margin-bottom: 40px;
         }
 
+        .hidden {
+            display: none;
+        }
+
         footer {
             background: #ffffff;
             border: 2px solid #000;
@@ -238,6 +262,10 @@
     </div>
 
     <main class="container">
+        <div class="search-container">
+            <input type="text" class="search-box" id="searchBox" placeholder="Search memos by title, author, company, or keyword...">
+        </div>
+
         <section class="section">
             <h2 class="section-title">Historical & Political Documents</h2>
             <div class="memo-grid">
@@ -807,6 +835,45 @@
             link.click();
             document.body.removeChild(link);
         }
+
+        // Search functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchBox = document.getElementById('searchBox');
+            const sections = document.querySelectorAll('.section');
+            
+            searchBox.addEventListener('input', function(e) {
+                const searchTerm = e.target.value.toLowerCase().trim();
+                
+                sections.forEach(section => {
+                    const cards = section.querySelectorAll('.memo-card');
+                    let visibleCount = 0;
+                    
+                    cards.forEach(card => {
+                        const title = card.querySelector('.memo-title').textContent.toLowerCase();
+                        const author = card.querySelector('.memo-author').textContent.toLowerCase();
+                        const year = card.querySelector('.memo-year').textContent.toLowerCase();
+                        const description = card.querySelector('.memo-description').textContent.toLowerCase();
+                        
+                        const searchableText = title + ' ' + author + ' ' + year + ' ' + description;
+                        
+                        if (searchTerm === '' || searchableText.includes(searchTerm)) {
+                            card.classList.remove('hidden');
+                            visibleCount++;
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                    
+                    // Hide section title if no cards are visible
+                    const sectionTitle = section.querySelector('.section-title');
+                    if (visibleCount === 0) {
+                        sectionTitle.classList.add('hidden');
+                    } else {
+                        sectionTitle.classList.remove('hidden');
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
