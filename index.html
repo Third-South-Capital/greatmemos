@@ -62,19 +62,27 @@
         .subtitle {
             font-size: 14px;
             color: #000;
-            margin: 0;
+            margin: 0 0 15px 0;
         }
 
         .header-content {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             gap: 20px;
             flex-wrap: wrap;
         }
 
         .header-text {
             flex: 1;
+            min-width: 300px;
+        }
+
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-end;
         }
 
         .download-all-btn {
@@ -88,21 +96,16 @@
             text-decoration: none;
             display: inline-block;
             text-align: center;
+            white-space: nowrap;
         }
 
         .download-all-btn:active {
             border-style: inset;
         }
 
-        .search-container {
-            background: #ffffff;
-            border: 2px solid #000;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
         .search-box {
-            width: 100%-20px;
+            width: 400px;
+            max-width: 100%;
             padding: 10px;
             font-size: 14px;
             border: 2px inset #fff;
@@ -235,6 +238,19 @@
             .section-title {
                 font-size: 18px;
             }
+
+            .header-content {
+                flex-direction: column;
+            }
+
+            .header-right {
+                width: 100%;
+                align-items: stretch;
+            }
+
+            .search-box {
+                width: 100%;
+            }
         }
 
         @media (max-width: 480px) {
@@ -255,16 +271,16 @@
                 <div class="header-text">
                     <h1>Great Memos</h1>
                     <p class="subtitle">An archive of historic business documents and strategic correspondence</p>
+                    <input type="text" class="search-box" id="searchBox" placeholder="Search memos by title, author, company, or keyword...">
                 </div>
-                <a href="#" class="download-all-btn" onclick="downloadAll(event)">Download All</a>
+                <div class="header-right">
+                    <a href="#" class="download-all-btn" onclick="downloadAll(event)">Download All</a>
+                </div>
             </div>
         </header>
     </div>
 
     <main class="container">
-        <div class="search-container">
-            <input type="text" class="search-box" id="searchBox" placeholder="Search memos by title, author, company, or keyword...">
-        </div>
 
         <section class="section">
             <h2 class="section-title">Historical & Political Documents</h2>
