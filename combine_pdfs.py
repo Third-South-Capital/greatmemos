@@ -69,11 +69,15 @@ def main():
         "zuck-unity.pdf",
         "sutton-bitter-lesson.pdf",
         # Investment & Business Analysis
+        "buffett-partnership.pdf",
+        "buffett-pensions.pdf",
         "buffett-geico.pdf",
         "buffett-sees.pdf",
+        "munger-mutual.pdf",
         "buffett-raikes-emails.pdf",
         "markopolos-madoff-fraud.pdf",
         "roelof-youtube.pdf",
+        "bothra-yt.pdf",
         "bessemer-yelp.pdf",
         "besssemer-linkedin.pdf",
         "bessemer-lifelock.pdf",
@@ -94,6 +98,8 @@ def main():
         "bessemer-servicetitan.pdf",
         "bessemer-velo3d.pdf",
         "bessemer-toast.pdf",
+        "sosin-letter.pdf",
+        "munger-past.pdf",
     ]
 
     merger = PdfMerger()

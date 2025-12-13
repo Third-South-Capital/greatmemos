@@ -111,10 +111,15 @@
             border: 2px inset #fff;
             background: #ffffff;
             font-family: Arial, sans-serif;
+            box-sizing: border-box;
         }
 
         .search-box:focus {
             outline: 2px solid #000080;
+        }
+        
+        .search-box::placeholder {
+            color: #808080;
         }
 
         .memo-grid {
@@ -250,6 +255,14 @@
 
             .search-box {
                 width: 100%;
+                font-size: 16px;
+                padding: 12px;
+            }
+            
+            .download-all-btn {
+                width: 100%;
+                padding: 12px 16px;
+                font-size: 16px;
             }
         }
 
@@ -260,6 +273,23 @@
 
             body {
                 margin: 10px;
+            }
+            
+            .header {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 20px;
+            }
+            
+            .subtitle {
+                font-size: 13px;
+            }
+            
+            .search-box {
+                font-size: 16px;
+                padding: 12px 10px;
             }
         }
     </style>
@@ -674,6 +704,54 @@
 
                 <div class="memo-card">
                     <div class="memo-header">
+                        <h3 class="memo-title">Letter to Warren Buffett and Partners</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1969</span>
+                            <span class="memo-author">Warren Buffett</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Buffett's letter explaining his investment philosophy and why he's closing his partnership due to lack of opportunities.</p>
+                    <a href="/memos/buffett-partnership.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Washington Post Pension Fund</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1975</span>
+                            <span class="memo-author">Warren Buffett</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Buffett's letter to Catherine Graham detailing how to save the Washington Post pension system.</p>
+                    <a href="/memos/buffett-pensions.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Mutual Savings and Loan Association Resignation</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">1989</span>
+                            <span class="memo-author">Charlie Munger</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Munger's resignation from the Mutual Savings and Loan Association due to industry scandals he found disgusting.</p>
+                    <a href="/memos/munger-mutual.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Vice Chairman Thoughts on Past and Future</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2023</span>
+                            <span class="memo-author">Charlie Munger</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Munger's reflection on how Berkshire Hathaway was built, what worked, and what will continue to work.</p>
+                    <a href="/memos/munger-past.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
                         <h3 class="memo-title">Go Huskers!</h3>
                         <div class="memo-meta">
                             <span class="memo-year">1997</span>
@@ -700,12 +778,12 @@
                     <div class="memo-header">
                         <h3 class="memo-title">Re: YouTube</h3>
                         <div class="memo-meta">
-                            <span class="memo-year">2005</span>
+                            <span class="memo-year">2010</span>
                             <span class="memo-author">Roelof Botha (Sequoia)</span>
                         </div>
                     </div>
-                    <p class="memo-description">Sequoia partner's investment memo on YouTube, one of the most successful venture investments ever made.</p>
-                    <a href="/memos/roelof-youtube.pdf" class="download-btn" download>Download PDF</a>
+                    <p class="memo-description">Sequoia partner's memo detailing knowledge and learnings from their YouTube investment case.</p>
+                    <a href="/memos/bothra-yt.pdf" class="download-btn" download>Download PDF</a>
                 </div>
 
                 <div class="memo-card">
@@ -946,6 +1024,18 @@
                     </div>
                     <p class="memo-description">Bessemer's Series B investment in Toast, the Boston-based restaurant point of sale software company.</p>
                     <a href="/memos/bessemer-toast.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <div class="memo-card">
+                    <div class="memo-header">
+                        <h3 class="memo-title">Cass Investment Partners Philosophy</h3>
+                        <div class="memo-meta">
+                            <span class="memo-year">2019</span>
+                            <span class="memo-author">Clifford Sosin</span>
+                        </div>
+                    </div>
+                    <p class="memo-description">Sosin's detailed investment philosophy memo outlining his approach to value investing and capital allocation.</p>
+                    <a href="/memos/sosin-letter.pdf" class="download-btn" download>Download PDF</a>
                 </div>
             </div>
         </section>
