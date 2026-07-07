@@ -98,8 +98,20 @@ def main():
         "bessemer-servicetitan.pdf",
         "bessemer-velo3d.pdf",
         "bessemer-toast.pdf",
+        "buffett-superinvestors.pdf",
         "sosin-letter.pdf",
         "munger-past.pdf",
+        # Foundational Papers & Whitepapers
+        "shannon-entropy.pdf",
+        "black-scholes.pdf",
+        "berners-lee-proposal.pdf",
+        "arthur-increasing-returns.pdf",
+        "brin-page-google.pdf",
+        "nakamoto-bitcoin.pdf",
+        "krizhevsky-alexnet.pdf",
+        "ethereum-whitepaper.pdf",
+        "vaswani-attention.pdf",
+        "aschenbrenner-situational-awareness.pdf",
     ]
 
     merger = PdfMerger()
