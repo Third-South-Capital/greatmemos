@@ -38,6 +38,7 @@ def main():
         # Historical & Political Documents
         "pliny-trajan-christians.pdf",
         "washington-states.pdf",
+        "bush-science-endless-frontier.pdf",
         "carp-nuclear.pdf",
         "powell-memo.pdf",
         "shultz-reagan.pdf",
