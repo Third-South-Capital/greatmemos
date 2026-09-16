@@ -39,6 +39,7 @@ def main():
         "pliny-trajan-christians.pdf",
         "washington-states.pdf",
         "carp-nuclear.pdf",
+        "kennedy-rice-space-effort-1962.pdf",
         "powell-memo.pdf",
         "shultz-reagan.pdf",
         # Strategic Memos & Leadership
